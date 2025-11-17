@@ -2,8 +2,9 @@
 from bookshelf.models import Book
 
 # Retrieve all books
-books = Book.objects.all()
-books
+book = Book.objects.get(title="1984")
+book
+
 
 #output
 <QuerySet [<Book: 1984 by George Orwell (1949)>]>
