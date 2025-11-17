@@ -1,0 +1,15 @@
+# Delete Operation - Book Model
+
+**Command:**
+
+```python
+from bookshelf.models import Book
+
+# Get the book instance
+book = Book.objects.get(title="Nineteen Eighty-Four")
+
+# Delete the book
+book.delete()
+
+# Verify deletion
+Book.objects.all()
