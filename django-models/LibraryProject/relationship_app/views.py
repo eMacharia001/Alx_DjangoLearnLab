@@ -6,7 +6,7 @@ from .models import Book, Library
 def list_all_books(request):
     books = Book.objects.all()
     output = "\n".join([f"{book.title} by {book.author.name}" for book in books])
-    return render(request, "relationship_app/book_list.html", {"books_text": output})
+    return render(request, "relationship_app/list_books.html", {"books_text": output})
 
 # Class-Based View
 class LibraryDetailView(DetailView):
